@@ -12,13 +12,15 @@ Due to file size limitations, large datasets and trained model weights are hoste
 
 ```
 ├── visionboard/                 # Core application source code
+│   ├── main.py                  # Main application entry point
 │   ├── pages/                   # Application pages and workflow logic
 │   ├── ui/                      # User interface components and layouts
-│   ├── webserver/               # Web server and API handling modules
 │   ├── backend/                 # Backend logic, utilities, and processing functions
-│   ├── main.py                  # Main application entry point
-│   ├── config.json              # System configuration settings
+│   ├── config/                  # System configuration settings
 │   ├── error_logs/              # Logged runtime and system errors
+│   ├── server/                  # Web server and API handling modules
+│   ├── web/                     
+│   ├── error_logs/
 │   └── machine_learning_models/ # Trained machine learning model files
 │
 ├── dataset/                     # Dataset files and external dataset instructions

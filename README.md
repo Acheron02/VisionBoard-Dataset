@@ -2,9 +2,9 @@
 
 ## 📌 Overview
 
-This repository is intended to store the dataset used for training, validation, and testing of the PCB inspection system. The dataset consists of PCB images and corresponding annotations for defect detection and component recognition tasks.
+This folder is intended to store the dataset used for training, validation, and testing of the PCB inspection system. The dataset consists of PCB images and corresponding annotations for defect detection and component recognition tasks.
 
-Due to file size limitations of GitHub, the **full dataset is hosted externally**.
+Due to file size limitations of GitHub, the **full dataset is not included** in this repository.
 
 ---
 
@@ -19,18 +19,23 @@ https://drive.google.com/file/d/1S9XIyG6gjrY39nwRVd1CESb_zeVqXzXj/view
 
 ## 📂 Expected Folder Structure
 
-After downloading and extracting the dataset, the directory should be organized as follows:
+After downloading and extracting the dataset archive, the directory should follow the structure below:
 
 ```
 dataset/
-├── raw/            # Original PCB images
-├── annotations/    # Labels / annotations for defects and components
-├── train/          # Training data
-├── val/            # Validation data
-└── test/           # Testing data
+├── models/            # Model-related files or references (if included)
+├── org_images/        # Original, unprocessed PCB images
+├── python_scripts/    # Helper scripts for preprocessing and dataset handling
+├── runs/              # Training and experiment outputs (auto-generated)
+├── train/             # Training images and labels
+├── val/               # Validation images and labels
+├── class_counter.txt  # Class distribution or count reference
+├── classes.txt        # List of defect/component classes
+├── extract.txt        # Notes or extraction logs
+├── dataset_custom.yaml# Dataset configuration file (e.g., YOLO format)
 ```
 
-> ⚠️ Folder names may vary depending on the model or framework used. Ensure consistency with the configuration files in the main project.
+> ⚠️ Some folders (such as `runs/`) may be generated automatically during training. Do not modify the structure unless reflected in the training configuration files.
 
 ---
 

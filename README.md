@@ -46,7 +46,7 @@ for instructions on how to download and properly place the dataset within the pr
 
 ## ⚙️ Features
 
-* Automated PCB defect detection
+* PCB defect detection
 * Electronic component recognition
 * Pass / Minor / Major severity grading
 * Designed for educational and research use

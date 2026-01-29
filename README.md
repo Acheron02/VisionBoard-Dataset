@@ -4,7 +4,7 @@
 
 This folder is intended to store the dataset used for training, validation, and testing of the PCB inspection system. The dataset consists of PCB images and corresponding annotations for defect detection and component recognition tasks.
 
-Due to file size limitations of GitHub, the **full dataset is not included** in this repository.
+Due to file size limitations of GitHub, the **full dataset is hosted externally**.
 
 ---
 

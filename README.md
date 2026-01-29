@@ -103,7 +103,6 @@ python main.py
 - **Christian Jalliel Uriarte**
 
 BS Computer Engineering at National University – Fairview
-Electives Project
 
 ---
 

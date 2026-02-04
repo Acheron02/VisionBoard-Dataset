@@ -1,0 +1,24 @@
+{
+    "DEFECT_GRADE_THRESHOLDS": {
+        "Pass": 10,
+        "Minor Severity": 25,
+        "Major Severity": 40
+    },
+    "MODEL_DETECTION_CONFIGS": {
+        "Model 1": {
+            "conf": 0.5,
+            "iou": 0.45,
+            "max_det": 100
+        },
+        "Model 2": {
+            "conf": 0.1,
+            "iou": 0.5,
+            "max_det": 200
+        },
+        "Model 3": {
+            "conf": 0.3,
+            "iou": 0.5,
+            "max_det": 100
+        }
+    }
+}

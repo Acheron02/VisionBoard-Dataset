@@ -1,0 +1,10 @@
+.venv/
+.env
+
+/machine_learning_models/
+/error_logs/
+/captured_images/
+/annotated_images/
+
+___pycache__/
+.pyc

@@ -60,9 +60,9 @@ class CameraPage(tk.Frame):
 
         # ---------------- MODELS ----------------
         self.model_paths = {
-            "Model 1": "/home/jmc2/visionboard2/machine_learning_models/model_a",
-            "Model 2": "/home/jmc2/visionboard2/machine_learning_models/model_b",
-            "Model 3": "/home/jmc2/visionboard2/machine_learning_models/model_c",
+            "Model 1": "/home/jmc2/VisionBoard-Proj/machine_learning_models/model_a",
+            "Model 2": "/home/jmc2/VisionBoard-Proj/machine_learning_models/model_b",
+            "Model 3": "/home/jmc2/VisionBoard-Proj/machine_learning_models/model_c",
         }
         self.model_configs = self.config.get("MODEL_DETECTION_CONFIGS", {
             "Model 1": {"conf": 0.5, "iou": 0.35, "max_det": 100},
@@ -73,7 +73,7 @@ class CameraPage(tk.Frame):
         # Only load YOLO if single-model detection
         self.models = {}
         if not grading and self.model_name:
-            self.models[self.model_name] = YOLO(self.model_paths[self.model_name])
+            self.models[self.model_name] = YOLO(self.model_paths[self.model_name], task="detect")
 
         # ---------------- CAMERA ----------------
         self.init_camera()

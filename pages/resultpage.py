@@ -159,7 +159,7 @@ class ResultsPage(tk.Frame):
             self.grade_label = tk.Label(
                 self.legend_column,
                 text=f"PCB Grade: {self.grade}",
-                font=(theme.font_bold, 42),
+                font=(theme.font_bold, theme.sizes["body"]),
                 fg=self.colors["text"],
                 bg=self.colors["bg"],
                 justify="center",

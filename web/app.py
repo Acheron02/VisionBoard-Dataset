@@ -8,7 +8,7 @@ load_dotenv(dotenv_path=".env.local")
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "visionboard_default_secret")
 
-CONFIG_PATH = "/home/jmc2/visionboard2/config/grading_config.json"
+CONFIG_PATH = "/home/jmc2/VisionBoard-Proj/config/grading_config.json"
 
 @app.after_request
 def skip_ngrok_warning(response):
@@ -25,7 +25,7 @@ def load_config():
         "MIN_BOX_HEIGHT": 6,
         "CUSTOM_DEFECT_COLORS": {
             "open": [255,0,0],
-            "short ": [0,0,255],
+            "short": [0,0,255],
             "90": [255,255,255],
             "ps": [0,255,255],
             "sb": [255,0,255],

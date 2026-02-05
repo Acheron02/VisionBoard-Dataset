@@ -5,7 +5,7 @@ import json
 from ultralytics import YOLO
 from ui.theme import theme
 
-CONFIG_PATH = "/home/jmc2/visionboard2/config/grading_config.json"
+CONFIG_PATH = "/home/jmc2/VisionBoard-Proj/config/grading_config.json"
 
 # ---------------------- Defaults ----------------------
 # Define DEFAULT_DEFECT_COLORS before using it in DEFAULT_CONFIG

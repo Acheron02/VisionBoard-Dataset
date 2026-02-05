@@ -38,7 +38,7 @@ class ThemeManager:
                 "muted": "#777777",
                 "accent": "#F2C66D",
                 "danger": "#e74c3c",
-                "defect_colors": {    # <-- added here too
+                "defect_colors": {
                     "short": (255, 0, 0),
                     "open": (0, 0, 255),
                     "90": (255, 255, 255),
@@ -62,23 +62,28 @@ class ThemeManager:
         }
 
         # --- Font paths ---
-        bold_path = "/usr/share/fonts/truetype/fonts/BebasNeueRegular.ttf"
-        regular_path = "/usr/share/fonts/truetype/fonts/NunitoRegular.ttf"
+        self.bold_path = "/usr/share/fonts/truetype/custom/BebasNeueRegular.ttf"
+        self.regular_path = "/usr/share/fonts/truetype/custom/NunitoRegular.ttf"
 
-        # --- Load fonts dynamically if root is provided ---
-        self.font_bold = "Bebas Neue"    # fallback
-        self.font_regular = "Nunito" # fallback
+        # --- Default system fonts ---
+        self.font_bold = "Impact"
+        self.font_regular = "URW Gothic"
 
+        # --- Load custom fonts if root is provided ---
         if root is not None:
             try:
-                if Path(bold_path).exists():
-                    tmp = font.Font(root=root, file=bold_path, size=self.sizes["body"])
-                    self.font_bold = tmp.actual("family")
-                if Path(regular_path).exists():
-                    tmp = font.Font(root=root, file=regular_path, size=self.sizes["body"])
-                    self.font_regular = tmp.actual("family")
+                if Path(self.bold_path).exists():
+                    tmp_bold = font.Font(root=root, file=self.bold_path, size=self.sizes["body"])
+                    self.font_bold = tmp_bold.actual("family")
+                    print("[Font] Loaded bold:", self.font_bold)
+
+                if Path(self.regular_path).exists():
+                    tmp_reg = font.Font(root=root, file=self.regular_path, size=self.sizes["body"])
+                    self.font_regular = tmp_reg.actual("family")
+                    print("[Font] Loaded regular:", self.font_regular)
             except Exception as e:
-                print("Failed to load Segoe UI fonts, fallback to system font:", e)
+                print("Failed to load custom fonts, fallback to system font:", e)
+
 
     # ===============================
     # Theme functions

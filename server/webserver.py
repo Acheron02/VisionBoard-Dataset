@@ -39,8 +39,8 @@ app.secret_key = FLASK_SECRET
 # -------------------------------------------------
 # PATHS
 # -------------------------------------------------
-ANNOTATED_DIR = "/home/jmc2/visionboard2/annotated_images"
-CONFIG_PATH = "/home/jmc2/visionboard2/config/grading_config.json"
+ANNOTATED_DIR = "/home/jmc2/VisionBoard-Proj/annotated_images"
+CONFIG_PATH = "/home/jmc2/VisionBoard-Proj/config/grading_config.json"
 
 # -------------------------------------------------
 # DEFAULT CONFIG
